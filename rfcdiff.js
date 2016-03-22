@@ -1,8 +1,6 @@
 var chunk_index = 0;
 var old_chunk = null;
 
-window.onload = "onready()";
-
 function format_chunk(index) {
     var prefix = "diff";
     var str = index.toString();
@@ -15,7 +13,7 @@ function format_chunk(index) {
 function find_chunk(n){
     return document.querySelector('a[name$="' + n + '"]');
 }
-    
+
 function change_chunk(offset) {
     var index = chunk_index + offset;
     var new_str;
@@ -46,8 +44,3 @@ document.onkeydown = function(e) {
         break;
     }
 };
-
-function onready() {
-    goto_chunk(10);
-}
-
