@@ -6,7 +6,7 @@ js = open(sys.argv[2])
 out = open(sys.argv[3], "w")
 
 for l in inf:
-    if (l.find("rfcdiff.js") != -1):
+    if (l.find('<script src="rfcdiff.js"></script>') != -1):
         out.write("   <script>\n")
         for l2 in js:
             out.write(l2)
