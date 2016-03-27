@@ -11,7 +11,7 @@ function format_chunk(index) {
 }
 
 function find_chunk(n){
-    return document.querySelector('a[name$="' + n + '"]');
+    return document.querySelector('tr[id$="' + n + '"]');
 }
 
 function change_chunk(offset) {
@@ -27,7 +27,7 @@ function change_chunk(offset) {
     if (old_chunk) {
         old_chunk.style.outline = "";
     }
-    old_chunk = new_chunk.parentNode.parentNode;
+    old_chunk = new_chunk;
     old_chunk.style.outline = "1px solid red";
     window.location.hash = "#" + new_str;
     window.scrollBy(0,-100);
